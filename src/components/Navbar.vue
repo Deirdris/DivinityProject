@@ -2,12 +2,12 @@
     <div id="nav">
       <nav>
         <div id="logo">
-          <router-link to="/" tag="img" src="@/assets/logo.png" alt="logo"/>
+          <router-link to="/"> <img src="@/assets/logo.png" alt="logo"/> </router-link>
         </div>
         <ul>
-          <li><router-link to="/heroes">Heroes</router-link></li>
-          <li><router-link to="/about">About</router-link></li>
-          <li><router-link id="gallery" to="/gallery">Gallery</router-link></li>
+          <li><router-link class="nav" to="/heroes">Heroes</router-link></li>
+          <li><router-link class="nav" to="/about">About</router-link></li>
+          <li><router-link class="nav" id="gallery" to="/gallery">Gallery</router-link></li>
         </ul>
       </nav>
     </div>
@@ -25,7 +25,7 @@
     #nav{
       background: black;
     }
-    a{
+    .nav{
       text-decoration: none;
       color: white;
       font-family: 'Dosis', sans-serif;
@@ -52,7 +52,7 @@
     nav{
       width: 80%;
       margin: auto;
-      padding: 10px 0px;
+      padding: 10px 0;
       display: flex;
       justify-content: space-between;
       align-items: center;
