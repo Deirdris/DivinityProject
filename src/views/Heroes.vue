@@ -66,7 +66,7 @@ export default {
           name: 'Sebille',
           age: 'Not known',
           specialization: 'Assassin',
-          job: 'Assissin',
+          job: 'Assassin',
           about: '"I used to be a slave, kept under the thumb of the Master: the bastard that made me hunt down my own kin.\n' +
               '              How did he do that, you ask? With the living scar you see on my cheek, this horror that takes no more than a song sung by Master dearest to control my very thoughts.\n' +
               '              But now the tables have turned.\n' +
