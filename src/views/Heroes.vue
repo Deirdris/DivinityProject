@@ -4,7 +4,8 @@
 
       <div class="container">
 
-        <div class="card" v-for="(hero, i) in heroes" v-bind:key="i" :style='{ display: i === activeCard ? "grid": ""}'>
+
+        <div class="card fade-in" v-for="(hero, i) in heroes" v-bind:key="i" :style='{ display: i === activeCard ? "grid": ""}'>
 
           <div class="image">
            <img class="portrait" :src='require(`@/assets/${hero.src}`)' :alt='hero.name'>
@@ -26,14 +27,21 @@
           </div>
 
           <div class="left">
-            <button v-on:click="activeCard--"><i class="fas fa-arrow-left"></i></button>
+            <button v-on:click="activeCard--" ><i style="color: #941f1f;" class="fas fa-arrow-left"></i></button>
           </div>
 
           <div class="right">
-            <button v-on:click="activeCard++"><i class="fas fa-arrow-right"></i></button>
+            <button v-on:click="activeCard++"><i style="color: #941f1f;" class="fas fa-arrow-right"></i></button>
+          </div>
+
+          <div id="backgroundLefttop">
+          </div>
+
+          <div id="backgroundRighttop">
           </div>
 
         </div>
+
 
       </div>
 
@@ -142,6 +150,11 @@ export default {
     display: none;
     grid-template-columns: 10% 40% 40% 10%;
     grid-template-rows: 45% auto 45%;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    opacity: 1;
   }
 
   .image{
@@ -150,7 +163,6 @@ export default {
     grid-row-end: 1;
     grid-row-start: 2;
     border-bottom: black solid 3px;
-    border-left: black solid 3px;
     border-right: black solid 3px;
     display: flex;
     align-items: center;
@@ -170,7 +182,6 @@ export default {
     grid-row-end: 1;
     grid-row-start: 2;
     border-bottom: black solid 3px;
-    border-right: black solid 3px;
     color: #941f1f;
     font-size: 20px;
     font-family: 'Dosis', sans-serif;
@@ -183,8 +194,6 @@ export default {
     grid-column-end: 4;
     grid-row-end: 2;
     grid-row-start: 4;
-    border-left: black solid 3px;
-    border-right: black solid 3px;
     color: #941f1f;
     font-size: 17px;
     font-family: 'Dosis', sans-serif;
@@ -197,12 +206,12 @@ export default {
     grid-column-end: 2;
     grid-row-end: 2;
     grid-row-start: 3;
-    color: #941f1f;
     font-size: 27px;
     font-family: 'Dosis', sans-serif;
     display: flex;
     align-items: center;
     justify-content: center;
+    background: black;
   }
 
   .right{
@@ -210,12 +219,54 @@ export default {
     grid-column-end: 5;
     grid-row-end: 2;
     grid-row-start: 3;
-    color: #941f1f;
     font-size: 27px;
     font-family: 'Dosis', sans-serif;
     display: flex;
     align-items: center;
     justify-content: center;
+    background: black;
+  }
+
+  #backgroundLefttop{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-end: 5;
+    grid-row-start: 1;
+    background: black;
+    z-index: 0;
+  }
+
+  #backgroundRighttop{
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-end: 5;
+    grid-row-start: 1;
+    background: black;
+    z-index: 0;
+  }
+
+
+  button{
+    border: none;
+    background: none;
+    z-index: 1;
+  }
+
+  .fade-in {
+    opacity: 1;
+    animation-name: fadeInOpacity;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 0.6s;
+  }
+
+  @keyframes fadeInOpacity {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
   }
 
 </style>
