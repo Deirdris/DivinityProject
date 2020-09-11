@@ -34,11 +34,6 @@
             <button v-on:click="activeCard++"><i style="color: #941f1f;" class="fas fa-arrow-right"></i></button>
           </div>
 
-          <div id="backgroundLefttop">
-          </div>
-
-          <div id="backgroundRighttop">
-          </div>
 
         </div>
 
@@ -85,13 +80,6 @@ export default {
   },
 
   methods: {
-    // changeCard: function (n){
-    //   //showCard(activeCard += n);
-    //   if (n < 0) {n = this.heroes.length - 1}
-    //   if (n > this.heroes.length - 1) {n = 0}
-    //   this.activeCard = n;
-    // }
-
   },
   watch: {
     activeCard(){
@@ -101,24 +89,6 @@ export default {
   }
 }
 
-//var activeCard = 1;
-//showCard(activeCard);
-
-// function showCard(n) {
-//   var cards = document.getElementsByClassName("card");
-//
-//   if (n > cards.length) {activeCard = 1}
-//   if (n < 1) {activeCard = cards.length}
-//
-// console.log(activeCard);
-//
-//   for (var i = 0; i < cards.length; i++) {
-//     cards[i].style.display = "none";
-//   }
-//
-//   cards[activeCard-1].style.display = "grid";
-//
-// }
 </script>
 
 <style lang="scss">
@@ -150,10 +120,6 @@ export default {
     display: none;
     grid-template-columns: 10% 40% 40% 10%;
     grid-template-rows: 45% auto 45%;
-    -webkit-transition: all 0.5s ease-in-out;
-    -moz-transition: all 0.5s ease-in-out;
-    -o-transition: all 0.5s ease-in-out;
-    transition: all 0.5s ease-in-out;
     opacity: 1;
   }
 
@@ -204,8 +170,8 @@ export default {
   .left{
     grid-column-start: 1;
     grid-column-end: 2;
-    grid-row-end: 2;
-    grid-row-start: 3;
+    grid-row-end: 5;
+    grid-row-start: 1;
     font-size: 27px;
     font-family: 'Dosis', sans-serif;
     display: flex;
@@ -217,8 +183,8 @@ export default {
   .right{
     grid-column-start: 4;
     grid-column-end: 5;
-    grid-row-end: 2;
-    grid-row-start: 3;
+    grid-row-end: 5;
+    grid-row-start: 1;
     font-size: 27px;
     font-family: 'Dosis', sans-serif;
     display: flex;
@@ -227,29 +193,11 @@ export default {
     background: black;
   }
 
-  #backgroundLefttop{
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-end: 5;
-    grid-row-start: 1;
-    background: black;
-    z-index: 0;
-  }
-
-  #backgroundRighttop{
-    grid-column-start: 4;
-    grid-column-end: 5;
-    grid-row-end: 5;
-    grid-row-start: 1;
-    background: black;
-    z-index: 0;
-  }
 
 
   button{
     border: none;
     background: none;
-    z-index: 1;
   }
 
   .fade-in {
