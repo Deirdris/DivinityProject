@@ -202,11 +202,13 @@ export default {
   }
 
   .fade-in {
-    opacity: 1;
-    animation-name: fadeInOpacity;
-    animation-iteration-count: 1;
-    animation-timing-function: ease-in;
-    animation-duration: 0.6s;
+    & p, & img {
+      opacity: 1;
+      animation-name: fadeInOpacity;
+      animation-iteration-count: 1;
+      animation-timing-function: ease-in;
+      animation-duration: 0.6s;
+    }
   }
 
   @keyframes fadeInOpacity {
