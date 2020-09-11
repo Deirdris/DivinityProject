@@ -100,7 +100,7 @@ export default {
 
   #background2{
     background: url("~@/assets/bg2.jpg");
-    height: 87.2vh;
+    height: 86.8vh;
   }
 
   .container{
@@ -112,7 +112,6 @@ export default {
 
   .card{
     height: 60%;
-    width: 80%;
     background: #140404;
     border-radius: 10px;
     border: black solid 5px;
@@ -121,6 +120,7 @@ export default {
     grid-template-columns: 10% 40% 40% 10%;
     grid-template-rows: 45% auto 45%;
     opacity: 1;
+    max-width: 45%;
   }
 
   .image{
@@ -151,7 +151,6 @@ export default {
     color: #941f1f;
     font-size: 20px;
     font-family: 'Dosis', sans-serif;
-    padding-top: 19px;
     padding-left: 10px;
   }
 
@@ -165,6 +164,7 @@ export default {
     font-family: 'Dosis', sans-serif;
     padding-top: 29px;
     padding-left: 10px;
+    padding-right: 8px;
   }
 
   .left{
@@ -198,6 +198,7 @@ export default {
   button{
     border: none;
     background: none;
+    font-size: 25px;
   }
 
   .fade-in {

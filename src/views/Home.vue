@@ -30,7 +30,7 @@
 
 #background {
   background: url("~@/assets/bg.jpg");
-  height: 87.2vh;
+  height: 86.8vh;
   display: grid;
   grid-template-rows: repeat(4,25%);
   grid-template-columns: repeat(5,20%);
