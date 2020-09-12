@@ -23,7 +23,7 @@
 </script>
 
 <style lang="scss">
-#home {
+.home {
   height: 100%;
   font-family: 'Dosis', sans-serif;
 }
